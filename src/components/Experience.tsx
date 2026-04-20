@@ -1,9 +1,8 @@
 "use client";
 
 import Section from "./Section";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Briefcase, Calendar, MapPin, Terminal, Cpu } from "lucide-react";
-import TiltCard from "./TiltCard";
 
 const experienceData = [
   {
@@ -33,7 +32,7 @@ const experienceData = [
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -43,7 +42,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
@@ -55,7 +54,7 @@ const itemVariants = {
   },
 };
 
-const lineVariants = {
+const lineVariants: Variants = {
   hidden: { scaleY: 0 },
   visible: {
     scaleY: 1,

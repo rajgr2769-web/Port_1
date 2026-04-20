@@ -2,7 +2,7 @@
 
 import Section from "./Section";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Briefcase, Calendar, MapPin, TrendingUp, Camera } from "lucide-react";
 
 const salesExperienceData = [
@@ -27,7 +27,7 @@ const salesExperienceData = [
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -37,7 +37,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
@@ -49,7 +49,7 @@ const itemVariants = {
   },
 };
 
-const lineVariants = {
+const lineVariants: Variants = {
   hidden: { scaleY: 0 },
   visible: {
     scaleY: 1,
