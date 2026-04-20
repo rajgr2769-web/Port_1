@@ -35,23 +35,23 @@ const projectData = [
 export default function Projects() {
   return (
     <Section id="projects" title="Research & Key Projects">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {projectData.map((item, index) => (
-          <TiltCard key={index} className="group p-8">
+          <TiltCard key={index} className="group p-6 md:p-8">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-blue-600 transition-colors">
                 {item.title}
               </h3>
               <div className="flex gap-2">
-                <Code size={20} className="text-zinc-400 group-hover:text-blue-500 transition-colors" />
+                <Code size={18} className="text-zinc-400 group-hover:text-blue-500 transition-colors" />
               </div>
             </div>
-            <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
+            <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
               {item.description}
             </p>
             <div className="flex flex-wrap gap-2">
               {item.tags.map((tag, tIndex) => (
-                <span key={tIndex} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-semibold rounded-lg">
+                <span key={tIndex} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs md:text-sm font-semibold rounded-lg">
                   {tag}
                 </span>
               ))}

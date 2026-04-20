@@ -20,7 +20,7 @@ export default function Section({ children, id, className = "", title }: Section
         transition={{ duration: 0.5 }}
       >
         {title && (
-          <h2 className="text-3xl font-bold mb-8 text-zinc-900 dark:text-white border-b-2 border-zinc-200 dark:border-zinc-800 pb-2 inline-block">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-zinc-900 dark:text-white border-b-2 border-zinc-200 dark:border-zinc-800 pb-2 inline-block">
             {title}
           </h2>
         )}

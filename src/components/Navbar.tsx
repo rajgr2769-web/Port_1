@@ -49,18 +49,27 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-2xl border-b border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-2xl"
           >
-            <ul className="flex flex-col p-6 gap-6 font-medium text-zinc-600 dark:text-zinc-400">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a href={link.href} className="hover:text-blue-600 dark:hover:text-blue-500 transition-colors block text-lg" onClick={() => setIsOpen(false)}>
+            <ul className="flex flex-col p-8 gap-8 font-bold text-zinc-800 dark:text-zinc-200">
+              {navLinks.map((link, index) => (
+                <motion.li 
+                  key={link.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <a 
+                    href={link.href} 
+                    className="hover:text-blue-600 dark:hover:text-blue-500 transition-colors block text-2xl tracking-tight" 
+                    onClick={() => setIsOpen(false)}
+                  >
                     {link.name}
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
