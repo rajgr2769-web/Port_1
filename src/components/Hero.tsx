@@ -113,16 +113,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-30"
-      >
-        <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">Scroll</span>
-        <div className="w-1 h-12 rounded-full bg-gradient-to-b from-blue-500 to-transparent" />
-      </motion.div>
     </section>
   );
 }
